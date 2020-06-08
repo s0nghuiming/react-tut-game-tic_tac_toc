@@ -7,10 +7,18 @@ ol, ul {
   padding-left: 30px;
 }
 
+.board {
+  /* Static to prevent wrapping */
+  height: 101px;
+  width: 101px;
+  white-space: nowrap;
+}
+
 .board-row:after {
   clear: both;
   content: "";
   display: table;
+  white-space: nowrap;
 }
 
 .status {
@@ -42,10 +50,14 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-direction: column;
+}
+
+.game-board {
+  float: none;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: -1px;
 }
-
